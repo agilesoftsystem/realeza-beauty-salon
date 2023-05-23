@@ -3,6 +3,8 @@
 :root {
     --font-nav: "Bebas Neue", sans-serif;
     --cor-principal: #faa807;
+    --cor-branco: #ffe4d9;
+    --cor-nav: #1e1c1c;
 }
 
 body {
@@ -11,35 +13,97 @@ body {
     box-sizing: border-box;
 }
 
-nav.header-nav {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    background-color: #1e1c1c;
-    font-size: 26px;
-    font-family: var(--font-nav);
+header {
+    background-color: var(--cor-nav);
 }
 
-nav ul.nav-items {
-    display: flex;
-    justify-content: center;
+li {
     list-style: none;
-    gap: 55px;
-    margin: 30px 150px;
 }
 
-nav ul.nav-items a {
+a {
+    color: var(--cor-branco);
     text-decoration: none;
-    color: #fff;
-    transition: all 0.3s ease;
 }
 
-nav ul a:hover {
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 26px;
+    line-height: 31px;
+}
+
+.nav-link {
+    transition: 0.5s ease;
+}
+
+.nav-link:hover {
     color: var(--cor-principal);
-    transform: scale(1.1);
 }
 
-figure.nav-img {
-    margin: 17px 150px;
+.hamburguer {
+    display: none;
     cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: var(--cor-branco);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 70px;
+        gap: 10px;
+        padding-top: 20px;
+        height: 12rem;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+        background-color: var(--cor-nav);
+        font-size: 22px;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
 }
