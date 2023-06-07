@@ -28,6 +28,13 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    font-family: var(--font-nav);
+    color: var(--cor-nav);
+    font-size: 3rem;
+    margin-left: 70px;
+}
+
 .navbar {
     min-height: 70px;
     display: flex;
@@ -109,12 +116,6 @@ a {
     margin: 0px;
 }
 
-.sobre h2 {
-    font-family: var(--font-nav);
-    font-size: 3rem;
-    margin-left: 70px;
-}
-
 .container-sobre {
     display: flex;
     justify-content: space-around;
@@ -140,12 +141,6 @@ p.texto-sobre {
 .servicos {
     margin-top: 80px;
 }
-.servicos h2 {
-    font-family: var(--font-nav);
-    color: var(--cor-nav);
-    font-size: 3rem;
-    margin-left: 70px;
-}
 
 .servicos .container-cards {
     display: flex;
@@ -166,12 +161,15 @@ p.texto-sobre {
 .card2 {
     background-image: url(../img/card2.png);
 }
+
 .card3 {
     background-image: url(../img/card3.png);
 }
+
 .card4 {
     background-image: url(../img/card4.png);
 }
+
 .card5 {
     background-image: url(../img/card5.png);
 }
@@ -217,6 +215,8 @@ p.texto-sobre {
     opacity: 1;
 }
 
+/* BUTTON CTA */
+
 .cta {
     margin: 80px;
     display: flex;
@@ -242,36 +242,26 @@ p.texto-sobre {
     animation: shake3856 0.3s linear infinite both;
 }
 
-@keyframes shake3856 {
-    0% {
-        -webkit-transform: translate(0);
-        transform: translate(0);
-    }
+/* SECTION PARCEIROS */
 
-    20% {
-        -webkit-transform: translate(-2px, 2px);
-        transform: translate(-2px, 2px);
-    }
+.partner-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 250px 30px;
+}
 
-    40% {
-        -webkit-transform: translate(-2px, -2px);
-        transform: translate(-2px, -2px);
-    }
+.partner-logos img {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
 
-    60% {
-        -webkit-transform: translate(2px, 2px);
-        transform: translate(2px, 2px);
-    }
-
-    80% {
-        -webkit-transform: translate(2px, -2px);
-        transform: translate(2px, -2px);
-    }
-
-    100% {
-        -webkit-transform: translate(0);
-        transform: translate(0);
-    }
+.partner-logos img:hover {
+    transform: scale(1.2);
 }
 
 /* RESPONSIVE */
@@ -333,5 +323,50 @@ p.texto-sobre {
     .servicos h2,
     .text_hero {
         margin-left: 30px;
+    }
+
+    .partner-logos {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .partner-logos img {
+        margin: -30px 20px;
+    }
+
+    .parceiros h2 {
+        margin: 50px 30px;
+    }
+}
+
+@keyframes shake3856 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
     }
 }
