@@ -17,6 +17,9 @@ body {
 
 header {
     background-color: var(--cor-nav);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
 }
 
 li {
@@ -33,13 +36,6 @@ h2 {
     color: var(--cor-nav);
     font-size: 3rem;
     margin-left: 70px;
-}
-
-nav {
-    position: fixed;
-    background-color: var(--cor-nav);
-    z-index: 5;
-    width: 100%;
 }
 
 .navbar {
@@ -87,7 +83,7 @@ nav {
 /*SECTION HERO*/
 
 .hero {
-    height: 90vh;
+    height: 100vh;
     background-image: url(../img/hero-bg.jpg);
     background-position: center;
     background-size: cover;
@@ -121,7 +117,6 @@ nav {
 /*SECTION SOBRE*/
 
 .sobre {
-    /* height: 1000px; */
     margin: 0px;
 }
 
@@ -201,7 +196,7 @@ p.texto-sobre {
     font-family: var(--font-nav);
     color: var(--cor-branco);
     font-size: 2rem;
-    z-index: 2;
+    z-index: 1;
     text-shadow: 1px 1px #000000a2;
     transform: scale(0.8);
     transition: 0.5s;
@@ -260,7 +255,7 @@ p.texto-sobre {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0 250px 30px;
+    margin: 0 250px 80px;
 }
 
 .partner-logos img {
@@ -415,6 +410,11 @@ footer {
     .rodape {
         padding-top: 25px;
     }
+
+    .container-sobre video {
+        z-index: 0;
+        margin-top: 70px;
+    }
 }
 
 @media (max-width: 390px) {
@@ -438,10 +438,6 @@ footer {
     p.texto-sobre {
         min-width: 233px;
         margin-left: 30px;
-    }
-
-    .container-sobre video {
-        min-width: 250px;
     }
 
     .cta {
