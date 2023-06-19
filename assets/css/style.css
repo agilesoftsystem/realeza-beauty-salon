@@ -415,6 +415,11 @@ footer {
         z-index: 0;
         margin-top: 70px;
     }
+
+    .container-sobre {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 390px) {
@@ -438,6 +443,14 @@ footer {
     p.texto-sobre {
         min-width: 233px;
         margin-left: 30px;
+    }
+
+    .container-sobre {
+        width: 70vw;
+    }
+
+    video {
+        width: 70vw;
     }
 
     .cta {
